@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from Business.Package_service import modify_package, add_package, remove_packages, \
+from Business.Package_service import modify_package, remove_packages, \
     search_packages_within_a_given_date_range, \
     search_packages_with_a_given_destination_and_a_price_lower_than_a_given_amount, \
     search_packages_with_a_specific_end_date, number_of_offers_for_a_given_destination, \
@@ -8,6 +8,7 @@ from Business.Package_service import modify_package, add_package, remove_package
     average_price_for_a_given_destination, remove_packages_that_have_higher_price_and_different_destination, \
     remove_packages_within_a_month, make_copy, list_for_undo
 from Domain.Package import create_package, get_start_date, get_destination, get_end_date, get_price
+from Infrastructure.repo_package import add_package
 
 from Validation.Validation_Package import validate_package
 

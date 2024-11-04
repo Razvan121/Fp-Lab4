@@ -1,11 +1,12 @@
 
-from Business.Package_service import add_package, modify_package, remove_packages, \
+from Business.Package_service import modify_package, remove_packages, \
     search_packages_within_a_given_date_range, \
     search_packages_with_a_given_destination_and_a_price_lower_than_a_given_amount, \
     search_packages_with_a_specific_end_date, number_of_offers_for_a_given_destination, \
     packages_within_a_specific_period_entered_from_the_keyboard_in_ascending_order_of_price, \
     average_price_for_a_given_destination, remove_packages_within_a_month, \
     remove_packages_that_have_higher_price_and_different_destination, list_for_undo, make_copy
+from Infrastructure.repo_package import add_package
 from Tests.All_Tests import run_all
 from UI.Console import *
 from UI.Read import read_package, read_numberpack, read_date, read_destination, read_price, read_day, read_month

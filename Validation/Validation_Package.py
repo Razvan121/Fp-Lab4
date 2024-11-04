@@ -1,6 +1,5 @@
 from Domain.Package import get_price, get_destination, get_start_date, get_end_date
 
-
 PACKAGE_PRICE_ERR = "Package price cannot be negative or zero."
 DESTINATION_ERR = "Destination cannot be empty."
 START_DATE_ERR = "Start date cannot be empty."
@@ -8,6 +7,9 @@ END_DATE_ERR = "End date cannot be empty."
 
 
 def validate_package(package):
+    """
+    :param package: the current package from the list of packages
+    """
     error_messages = []
 
     def add_error(condition, message):

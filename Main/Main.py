@@ -1,4 +1,3 @@
-from Tools.scripts.win_add2path import modify
 
 from Business.Package_service import add_package, modify_package, remove_packages, \
     search_packages_within_a_given_date_range, \
@@ -44,19 +43,16 @@ def meniu():
 
                 if modify_choice == 's' or modify_choice == 'e':
 
-                    print("Start_date or End_date >>>")
                     value = read_date()
                     modify_package(packages, index, modify_choice, value)
 
                 if modify_choice == 'd':
 
-                    print("Destination >>>")
                     value = read_destination()
                     modify_package(packages, index, modify_choice, value)
 
                 if modify_choice == 'p':
 
-                    print("Price >>>")
                     value = read_price()
                     modify_package(packages, index, modify_choice, value)
 

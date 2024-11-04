@@ -1,4 +1,5 @@
-from Domain.Package import get_price, get_start_date, get_end_date, get_destination
+from Domain.Package import get_price, get_start_date, get_end_date, get_destination, set_package_start_date, \
+    set_package_end_date, set_destination, set_price
 from Validation.Validation_Package import validate_package
 
 
@@ -23,13 +24,13 @@ def modify_package(package, index, choice, value):
     :param value: The new value to be set for the specified attribute.
     """
     if choice == 's':
-        package[index][0] = value
+        set_package_start_date(package, index, value)
     elif choice == 'e':
-        package[index][1] = value
+        set_package_end_date(package, index, value)
     elif choice == 'd':
-        package[index][2] = value
+        set_destination(package, index, value)
     elif choice == 'p':
-        package[index][3] = value
+        set_price(package, index, value)
 
 
 def remove_packages(packages, choice, value):
@@ -44,10 +45,10 @@ def remove_packages(packages, choice, value):
 
         return list(filter(lambda package: get_destination(package) != value, packages))
     elif choice == 'duration':
-        return list(filter(lambda package: get_end_date(package).day - get_start_date(package).day +1 > value, packages))
+        return list(
+            filter(lambda package: get_end_date(package).day - get_start_date(package).day + 1 > value, packages))
     elif choice == 'price':
         return list(filter(lambda package: get_price(package) <= value, packages))
-
 
 
 def search_packages_within_a_given_date_range(packages, start_date, end_date):
@@ -91,11 +92,10 @@ def search_packages_with_a_specific_end_date(packages, end_date):
     ]
 
 
-
 def number_of_offers_for_a_given_destination(packages, destination):
     """
 
-    :param package: The list of packages
+    :param packages: The list of packages
     :param destination: The desired destination
     :return: The count of packages that have the given destination
     """
@@ -108,14 +108,15 @@ def number_of_offers_for_a_given_destination(packages, destination):
     return cnt
 
 
-def packages_within_a_specific_period_entered_from_the_keyboard_in_ascending_order_of_price(packages,start_date,end_date):
+def packages_within_a_specific_period_entered_from_the_keyboard_in_ascending_order_of_price(packages, start_date,
+                                                                                            end_date):
     """
     :param packages: The list of packages.
     :param start_date: The start date of the search range.
     :param end_date: The end date of the search range.
     :return: A list of packages that match the given criteria.
     """
-    filtered_package=[
+    filtered_package = [
         package for package in packages
         if get_start_date(package) >= start_date and get_end_date(package) <= end_date
     ]
@@ -123,7 +124,6 @@ def packages_within_a_specific_period_entered_from_the_keyboard_in_ascending_ord
     sort_packs = sorted(filtered_package, key=lambda package: get_price(package))
 
     return sort_packs
-
 
 
 def average_price_for_a_given_destination(packages, destination):
@@ -147,6 +147,7 @@ def average_price_for_a_given_destination(packages, destination):
 
     return average
 
+
 def remove_packages_that_have_higher_price_and_different_destination(packages, price, destination):
     """
     :param packages: A list of dictionaries where each dictionary represents a package with keys including 'price' and 'destination'
@@ -155,7 +156,9 @@ def remove_packages_that_have_higher_price_and_different_destination(packages, p
     :return: A filtered list of packages that have a price lower than the specified price and match the specified destination
     """
 
-    return list(filter(lambda package: get_price(package) < price and get_destination(package) == destination, packages))
+    return list(
+        filter(lambda package: get_price(package) < price and get_destination(package) == destination, packages))
+
 
 def remove_packages_within_a_month(packages, month):
     """
@@ -164,9 +167,11 @@ def remove_packages_within_a_month(packages, month):
     :return: A list of packages that match the given criteria
     """
 
-    return list(filter(lambda package: not get_start_date(package).month <= month <= get_end_date(package).month, packages))
+    return list(
+        filter(lambda package: not get_start_date(package).month <= month <= get_end_date(package).month, packages))
 
-def list_for_undo(undo_list,packages):
+
+def list_for_undo(undo_list, packages):
     """
     :param undo_list: List of undo actions or states. This list will be modified by appending the current 'packages' to it.
     :param packages: The current state or package that needs to be added to the 'undo_list'.
@@ -174,5 +179,10 @@ def list_for_undo(undo_list,packages):
     """
     undo_list.append(packages)
 
+
 def make_copy(packages):
+    """
+    :param packages: the list of packages
+    :return: A copy for current list of packages.
+    """
     return [el[:] for el in packages]

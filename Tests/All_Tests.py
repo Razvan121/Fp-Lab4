@@ -9,7 +9,6 @@ from Business.Package_service import modify_package, add_package, remove_package
     remove_packages_within_a_month, make_copy, list_for_undo
 from Domain.Package import create_package, get_start_date, get_destination, get_end_date, get_price
 
-
 from Validation.Validation_Package import validate_package
 
 
@@ -37,7 +36,7 @@ def test_validate_package():
 
 def test_modify_package():
     start_date = datetime(2024, 10, 10)
-    end_date = datetime(2024, 10, 11)  # Corrected end_date to be after start_date
+    end_date = datetime(2024, 10, 11)
     destination = 'London'
     price = 100.15
     package_list = []
@@ -102,7 +101,6 @@ def test_remove_packages_duration():
     assert get_destination(package_list[0]) == 'Paris'
 
 
-
 def test_remove_packages_price():
     package_list = []
     start_date = datetime(2024, 10, 10)
@@ -123,7 +121,6 @@ def test_remove_packages_price():
     package_list = remove_packages(package_list, 'price', 100)
     assert len(package_list) == 1
     assert get_destination(package_list[0]) == 'London'
-
 
 
 def test_search_packages_within_a_given_date_range():
@@ -171,9 +168,12 @@ def test_search_packages_with_a_given_destination_and_a_price_lower_than_a_given
     given_price = 500
 
     add_package(package_list, package_2)
-    package_list = search_packages_with_a_given_destination_and_a_price_lower_than_a_given_amount(package_list, given_destination, given_price)
+    package_list = search_packages_with_a_given_destination_and_a_price_lower_than_a_given_amount(package_list,
+                                                                                                  given_destination,
+                                                                                                  given_price)
 
     assert len(package_list) == 1
+
 
 def test_search_packages_with_a_specific_end_date():
     package_list = []
@@ -245,6 +245,7 @@ def test_packages_within_a_specific_period_entered_from_the_keyboard_in_ascendin
     assert get_price(sorted_packages[0]) == 150
     assert get_price(sorted_packages[1]) == 250.15
 
+
 def test_average_price_for_a_given_destination():
     package_list = []
     start_date = datetime(2024, 10, 10)
@@ -264,7 +265,6 @@ def test_average_price_for_a_given_destination():
     average = average_price_for_a_given_destination(package_list, 'Paris')
 
     assert average == 200.075
-
 
 
 def test_remove__packages_that_have_higher_price_and_different_destination():
@@ -287,10 +287,12 @@ def test_remove__packages_that_have_higher_price_and_different_destination():
     given_price = 155
     given_destination = 'London'
 
-    package_list = remove_packages_that_have_higher_price_and_different_destination(package_list,given_price,given_destination)
+    package_list = remove_packages_that_have_higher_price_and_different_destination(package_list, given_price,
+                                                                                    given_destination)
     assert len(package_list) == 1
     assert get_destination(package_list[0]) == 'London'
-    
+
+
 def test_remove_packages_within_a_month():
     package_list = []
     start_date = datetime(2024, 10, 10)
@@ -309,7 +311,7 @@ def test_remove_packages_within_a_month():
     add_package(package_list, package_2)
 
     given_month = 7
-    package_list = remove_packages_within_a_month(package_list,given_month)
+    package_list = remove_packages_within_a_month(package_list, given_month)
     assert len(package_list) == 1
     assert get_destination(package_list[0]) == 'Paris'
 
@@ -331,6 +333,7 @@ def test_undo():
 
     assert get_destination(package_list[0]) == 'Paris'
 
+
 def run_all():
     test_create_package()
     test_validate_package()
@@ -350,6 +353,3 @@ def run_all():
 
 
 run_all()
-
-
-

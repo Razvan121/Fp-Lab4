@@ -3,8 +3,6 @@ from Domain.Package import get_price, get_start_date, get_end_date, get_destinat
 from Validation.Validation_Package import validate_package
 
 
-
-
 def modify_package(package, index, choice, value):
     """
     :param package: The list of packages to be modified.

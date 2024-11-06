@@ -51,8 +51,9 @@ def test_modify_package():
     modify_package(package_list, 0, 'd', value)
     value1 = 150
     modify_package(package_list, 0, 'p', value1)
-    assert value == get_destination(package_list[0])
-    assert value1 == get_price(package_list[0])
+    index = 0
+    assert value == get_destination(package_list[index])
+    assert value1 == get_price(package_list[index])
 
 
 def test_remove_packages_destination():
@@ -76,9 +77,9 @@ def test_remove_packages_destination():
     add_package(package_list, package_2)
 
     package_list = remove_packages(package_list, 'destination', 'Paris')
-
+    index = 0
     assert len(package_list) == 1
-    assert get_destination(package_list[0]) == 'London'
+    assert get_destination(package_list[index]) == 'London'
 
 
 def test_remove_packages_duration():
@@ -98,8 +99,9 @@ def test_remove_packages_duration():
     validate_package(package_2)
     add_package(package_list, package_2)
     package_list = remove_packages(package_list, 'duration', 3)
+    index = 0
     assert len(package_list) == 1
-    assert get_destination(package_list[0]) == 'Paris'
+    assert get_destination(package_list[index]) == 'Paris'
 
 
 def test_remove_packages_price():
@@ -120,8 +122,9 @@ def test_remove_packages_price():
     validate_package(package_2)
     add_package(package_list, package_2)
     package_list = remove_packages(package_list, 'price', 100)
+    index = 0
     assert len(package_list) == 1
-    assert get_destination(package_list[0]) == 'London'
+    assert get_destination(package_list[index]) == 'London'
 
 
 def test_search_packages_within_a_given_date_range():
@@ -290,8 +293,9 @@ def test_remove__packages_that_have_higher_price_and_different_destination():
 
     package_list = remove_packages_that_have_higher_price_and_different_destination(package_list, given_price,
                                                                                     given_destination)
+    index = 0
     assert len(package_list) == 1
-    assert get_destination(package_list[0]) == 'London'
+    assert get_destination(package_list[index]) == 'London'
 
 
 def test_remove_packages_within_a_month():
@@ -313,8 +317,9 @@ def test_remove_packages_within_a_month():
 
     given_month = 7
     package_list = remove_packages_within_a_month(package_list, given_month)
+    index = 0
     assert len(package_list) == 1
-    assert get_destination(package_list[0]) == 'Paris'
+    assert get_destination(package_list[index]) == 'Paris'
 
 
 def test_undo():
@@ -331,8 +336,9 @@ def test_undo():
     value = 'London'
     modify_package(package_list, 0, 'd', value)
     package_list = undo_list_test.pop()
+    index  = 0
 
-    assert get_destination(package_list[0]) == 'Paris'
+    assert get_destination(package_list[index]) == 'Paris'
 
 
 def run_all():

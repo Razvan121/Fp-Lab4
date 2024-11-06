@@ -186,5 +186,5 @@ def meniu():
             print("Choose a valid option")
 
 
-run_all()
-meniu()
+# run_all()
+# meniu()

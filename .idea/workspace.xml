@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c33b795-851b-4b05-89ca-ec6f59023112" name="Changes" comment="project">
+    <list default="true" id="7c33b795-851b-4b05-89ca-ec6f59023112" name="Changes" comment="repo added">
+      <change afterPath="$PROJECT_DIR$/Choose_Meniu/Interface-Meniu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Choose_Meniu/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_UI/Interface1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_UI/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_UI/console.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/Package_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Package_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Package.py" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Package.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/Main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/All_Tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/All_Tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Validation/Validation_Package.py" beforeDir="false" afterPath="$PROJECT_DIR$/Validation/Validation_Package.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,21 +30,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Razvan121"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Razvan121&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Razvan121/Fp-Lab4",
-    "accountId": "cb5cb308-a9af-43b2-a15a-ed63c6618b3c"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Razvan121/Fp-Lab4&quot;,
+    &quot;accountId&quot;: &quot;cb5cb308-a9af-43b2-a15a-ed63c6618b3c&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2oJHPoisSdw6R3M5I8HgPYHGPZA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -53,15 +56,21 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.All_Tests.executor": "Run",
+    "Python.Interface-Meniu.executor": "Run",
+    "Python.Interface.executor": "Run",
+    "Python.Interface1.executor": "Run",
     "Python.Main.executor": "Run",
     "Python.Package_service.executor": "Run",
+    "Python.console.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Razvan/PycharmProjects/lab4-6",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "Errors",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -81,7 +90,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1730580736323</updated>
-      <workItem from="1730580742055" duration="21620000" />
+      <workItem from="1730580742055" duration="26909000" />
+      <workItem from="1730760395507" duration="543000" />
+      <workItem from="1730760951605" duration="749000" />
+      <workItem from="1730879963539" duration="8596000" />
     </task>
     <task id="LOCAL-00001" summary="project">
       <option name="closed" value="true" />
@@ -91,7 +103,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730634531372</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="setters+">
+      <option name="closed" value="true" />
+      <created>1730705612699</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1730705612699</updated>
+    </task>
+    <task id="LOCAL-00003" summary="repo added">
+      <option name="closed" value="true" />
+      <created>1730705869372</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730705869372</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,11 +127,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="project" />
-    <option name="LAST_COMMIT_MESSAGE" value="project" />
+    <MESSAGE value="setters+" />
+    <MESSAGE value="repo added" />
+    <option name="LAST_COMMIT_MESSAGE" value="repo added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/project_Lab4$Package_service.coverage" NAME="Package_service Coverage Results" MODIFIED="1730593082933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Business" />
-    <SUITE FILE_PATH="coverage/project_Lab4$Main.coverage" NAME="Main Coverage Results" MODIFIED="1730704253006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Main" />
+    <SUITE FILE_PATH="coverage/project_Lab4$Main.coverage" NAME="Main Coverage Results" MODIFIED="1730883312217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Main" />
+    <SUITE FILE_PATH="coverage/project_Lab4$Interface.coverage" NAME="Interface Coverage Results" MODIFIED="1730883817071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_UI" />
+    <SUITE FILE_PATH="coverage/project_Lab4$console.coverage" NAME="console Coverage Results" MODIFIED="1730882129842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads/seminar_4/proiect_pisici/presentation" />
     <SUITE FILE_PATH="coverage/project_Lab4$All_Tests.coverage" NAME="All_Tests Coverage Results" MODIFIED="1730633950279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
+    <SUITE FILE_PATH="coverage/project_Lab4$Interface_Meniu.coverage" NAME="Interface-Meniu Coverage Results" MODIFIED="1730898500801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Choose_Meniu" />
+    <SUITE FILE_PATH="coverage/project_Lab4$Interface1.coverage" NAME="Interface1 Coverage Results" MODIFIED="1730898345835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new_UI" />
   </component>
 </project>
